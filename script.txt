@@ -1,0 +1,27 @@
+"Hello, everyone! Today, I'm going to explain a Python script designed to organize files in a specified directory based on several criteria like file extensions, names, sizes, or simply ejecting files from subfolders. 
+
+We start with the main function . This function is where all the actions begin. It starts by defining a file path, which in this case points to a directory named 'Belgeler' on the Desktop. 
+
+Next, the user is prompted to choose an operation with a simple text menu. There are four choices:
+
+Group by extension
+Group by name
+Group by size
+Eject Files
+
+We collect the user’s choice as input and depending on the user's choice, this function calls one of four specialized functions—extension_group, name_group, size_group, or eject.
+
+Now, let’s go through these four grouping functions one by one:
+
+extension_group function: This function organizes files based on their extensions, such as '.txt', '.jpg', '.pdf', and so on.  If the file is actually a folder, it moves that folder into a new folder named ‘Directory’. Otherwise, it creates a new folder named after the file extension, like 'txt' for text files or 'jpg' for image files, if that folder doesn't already exist. It then moves each file into its corresponding extension folder.
+
+name_group function: This function groups files based on the first letter of their names. If the file is a folder, program moves files into the 'Directory' folder. And it extracts the first letter of its name, capitalizes it, and creates a new folder named after that letter if it doesn’t already exist. For example, all files starting with 'A' go into the 'A' folder, those starting with 'B' into the 'B' folder, and so on. 
+
+size_group function: This one is a bit more complex, as it organizes files based on their sizes. It calculates each file’s size in kilobytes and groups them into five categories: 'Very Small (0-16 KB)', 'Small (16 KB - 1 MB)', 'Medium (1 MB - 128 MB)', 'Large (128 MB - 1 GB)', and 'Very Large (1 GB+)'. 
+
+eject function: The final operation is ejecting, which essentially means flattening the folder structure. This function iterates over each folder in the directory and moves its contents back into the main directory. After moving all the files, it removes the now-empty subfolders. 
+
+
+In summary, this program offers a simple yet effective way to manage files. By organizing files based on their extensions, names, or sizes, or by flattening folder structures, it helps users keep their directories tidy and easy to navigate. The leverages built-in Python modules like os and shutil to manipulate files and directories seamlessly.
+
+I hope this explanation gives you a clear understanding of how the program works and why it’s useful. Thank you for listening!"
